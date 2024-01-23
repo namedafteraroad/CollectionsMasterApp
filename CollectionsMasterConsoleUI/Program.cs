@@ -89,16 +89,10 @@ namespace CollectionsMasterConsoleUI
             //Remember: What if the user types "abc" accident your app should handle that!
             Console.WriteLine("What number will you search for in the number list?");
             //WORK HERE
+            int userInput = int.Parse( Console.ReadLine() );
+            
 
-            int userNumber;
-            bool isANumber;
-
-            do
-            {
-                isANumber = int.TryParse(Console.ReadLine(), out userNumber);
-            } while (isANumber == false);
-
-            NumberChecker(myNumList, userNumber);
+            NumberChecker(myNumList, userInput);
 
 
             Console.WriteLine("-------------------");
@@ -159,17 +153,24 @@ namespace CollectionsMasterConsoleUI
         private static void NumberChecker(List<int> numberList, int searchNumber)
         {
             //maybe bool
+            //redone following in class
+            //fixing the repeating loop
+
+
+            bool foundNumber = false;
             foreach (var item in numberList)
             {
-                if (numberList.Contains(searchNumber))
+                if (item == searchNumber)
                 {
                     Console.WriteLine($"Yes, {searchNumber} is in list ");
+                    foundNumber = true;
                     break;
                 }
-                else
-                {
-                    Console.WriteLine($"{searchNumber} is not in list");
-                }
+                
+            }
+            if (foundNumber == false)
+            {
+                Console.WriteLine($"{searchNumber} is not in list");
             }
         }
 
