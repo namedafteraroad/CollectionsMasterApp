@@ -89,7 +89,9 @@ namespace CollectionsMasterConsoleUI
             //Remember: What if the user types "abc" accident your app should handle that!
             Console.WriteLine("What number will you search for in the number list?");
             //WORK HERE
-            int userInput = int.Parse( Console.ReadLine() );
+            //look up how to use parse
+            //following along but need work
+            bool canParse = int.TryParse( Console.ReadLine(), out int userInput );
             
 
             NumberChecker(myNumList, userInput);
