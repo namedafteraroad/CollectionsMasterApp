@@ -91,8 +91,22 @@ namespace CollectionsMasterConsoleUI
             //WORK HERE
             //look up how to use parse
             //following along but need work
-            bool canParse = int.TryParse( Console.ReadLine(), out int userInput );
-            
+            //bool canParse = int.TryParse( Console.ReadLine(), out int userInput );
+
+            //new steps
+            //followed steps as we went
+
+            bool canParse;
+            int userInput;
+            do
+            {
+                canParse = int.TryParse( Console.ReadLine(),out userInput);
+            }while( canParse == false);
+
+
+
+
+
 
             NumberChecker(myNumList, userInput);
 
