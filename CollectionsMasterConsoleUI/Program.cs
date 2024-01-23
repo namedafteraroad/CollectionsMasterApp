@@ -135,7 +135,7 @@ namespace CollectionsMasterConsoleUI
 
             //TODO: Clear the list
             myNumList.Clear();
-
+            NumberPrinter(myNumList);
             #endregion
         }
 
@@ -153,7 +153,7 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numberList)
         {
-           
+           //redoing in class
 
             for(int i = numberList.Count - 1; i >= 0; i--)
             {
